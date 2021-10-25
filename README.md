@@ -7,6 +7,7 @@ Python package for JWT sign verification and decoding
 pip install pySdk
 
 
-#Running Flask Server
+# To Flask app
 
+cd app
 flask run
