@@ -22,7 +22,7 @@ def App():
         print("signature is invalid")
         return {};
     if not validateAddtionalAttributes(token):
-        print("invalid additional attributes")
+        print("Invalid Token")
         return {};
     print(accessToken(token).getUserId());
     print(accessToken(token).decodePayload())
@@ -38,7 +38,7 @@ def validateAddtionalAttributes(token):
         
         if(accessToken(token).getIss()!="https://www.secuuth.io"):
             return False
-        if(accessToken(token).getAud()!="***************************"):
+        if(accessToken(token).getAud()!="**********************"): # 👈 provide your key id here
             return False;
         if(utc_timestamp-accessToken(token).getExp()>0):
             return False
